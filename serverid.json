@@ -1,0 +1,20 @@
+{
+    "inheritFrom": "None",
+    "fivem": true,
+    "logs": {
+        "edits": "",
+        "deletes": "",
+        "nicknames": "",
+        "joinsleaves": "",
+        "roles": "",
+        "punishments": ""
+    },
+    "fixScreenshareIssues": false,
+    "messages": {
+        "name": "",
+        "shortname": "",
+        "success": "",
+        "info": "",
+        "error": ""
+    }
+}

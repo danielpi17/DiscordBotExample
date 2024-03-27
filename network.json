@@ -1,0 +1,16 @@
+{
+    "token": "",
+    "mainServer": "",
+    "fivemServer": "",
+    "database": {
+        "host": "",
+        "username": "",
+        "password": ""
+    },
+    "networkLogs": {
+        "networkPunishments": "",
+        "fivemPunishments": "",
+        "trustSystem": ""
+    },
+    "tempRefreshSeconds": 30
+}

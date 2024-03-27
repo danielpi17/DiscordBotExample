@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Number Adder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h2>Permission Codes</h2>
+<label><input type="checkbox" id="first" value="2"> Administrator</label><br>
+<label><input type="checkbox" id="first" value="4"> Ban</label><br>
+<label><input type="checkbox" id="first" value="8"> Kick</label><br>
+<label><input type="checkbox" id="first" value="16"> Timeout</label><br>
+<label><input type="checkbox" id="first" value="32"> Timeout Remove</label><br>
+<label><input type="checkbox" id="first" value="64"> Ban Remove</label><br>
+<label><input type="checkbox" id="first" value="128"> Discord Punishments</label><br>
+<label><input type="checkbox" id="first" value="256"> Clear</label><br>
+<label><input type="checkbox" id="first" value="512"> Slowmode</label><br>
+<label><input type="checkbox" id="first" value="1024"> Lockdown</label><br>
+<label><input type="checkbox" id="first" value="2048"> Role Family Management</label><br>
+<label><input type="checkbox" id="first" value="4096"> Response Command</label><br>
+<label><input type="checkbox" id="first" value="8192"> Trust Admin</label><br>
+<label><input type="checkbox" id="first" value="16384"> FiveM Unban</label><br>
+<label><input type="checkbox" id="first" value="32768"> FiveM Punishments</label><br><br>
+<button onclick="calculateTotal()">Calculate Total</button><br><br>
+<div id="total"></div>
+
+<script>
+    function calculateTotal() {
+        var checkboxes = document.querySelectorAll('input[id="first"]');
+        var total = 0;
+        checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+                total += parseInt(checkbox.value);
+            }
+        });
+        document.getElementById('total').innerText = "Total: " + total;
+    }
+</script>
+
+<!-- Second Set of Inputs -->
+<h2>Network Permission Codes</h2>
+<label><input type="checkbox" id="second" value="2"> Administrator</label><br>
+<label><input type="checkbox" id="second" value="4"> Network Ban</label><br>
+<label><input type="checkbox" id="second" value="8"> Network Kick</label><br>
+<label><input type="checkbox" id="second" value="16"> Network Ban Remove</label><br>
+<label><input type="checkbox" id="second" value="32"> Network Nick</label><br>
+<label><input type="checkbox" id="second" value="64"> Network Punishments</label><br>
+<label><input type="checkbox" id="second" value="128"> Network Permissions</label><br>
+<label><input type="checkbox" id="second" value="256"> Network Response</label><br><br>
+<button onclick="calculateSecondTotal()">Calculate Second Total</button><br><br>
+<div id="secondTotal"></div>
+
+<script>
+    function calculateSecondTotal() {
+        var secondCheckboxes = document.querySelectorAll('input[id="second"]');
+        var secondTotal = 0;
+        secondCheckboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+                secondTotal += parseInt(checkbox.value);
+            }
+        });
+        document.getElementById('secondTotal').innerText = "Total: " + secondTotal;
+    }
+</script>
+</body>
+</html>
